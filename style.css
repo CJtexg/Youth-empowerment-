@@ -1,0 +1,82 @@
+body{
+    background-color:gray;
+    font-family: Arial, Helvetica, sans-serif;
+    color: peachpuff;
+    text-align: center;
+
+    background-image: url(file_00000000e23461f9ae52f85e8dc1e3f2.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    height: 20vh;
+}
+
+overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50%;
+    width: 100%;
+    background-color: rgba(red, green, blue, alpha);
+    z-index: 1;
+
+}
+::content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 2;
+    text-align: center;
+    color:white;
+    animation: fadeIn 2s ease-in-out;
+
+}
+::content h1{
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px ;
+
+
+}
+
+content button{
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    background-color: ff6600;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 2px 2px 8px ;
+    transition: (background-color 0.3s ease
+    )
+}
+::content button:hover{
+    background-color: e65c00;
+}
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+        transform: translate(-50%,-60%);        
+    }
+to {
+    opacity: 1;
+    transform:translate(-50%,-50%)
+}
+}
+@media (max-width: 600px) {
+    body {
+      background-color: lightblue;
+    }
+   }
+   @media screen and ( max-width:600px)
+   {
+   content{
+    width: 90%;
+    padding: 10px; ;
+   }
+}
